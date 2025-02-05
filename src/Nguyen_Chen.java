@@ -8,8 +8,13 @@ public class Nguyen_Chen {
     static Map<State, Integer> parentCounts = new HashMap<>();
 
     public static void main(String[] args) {
-        capacities = new int[]{3, 5, 19};
-        State initialState = new State(0, 0, 19);
+        if (args.length != 6) {
+            System.out.println("Enter 3 capacities and 3 intial amounts");
+            return;
+        }
+
+        capacities = new int[]{Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2])};
+        State initialState = new State(Integer.parseInt(args[3]), Integer.parseInt(args[4]), Integer.parseInt(args[5]));
         System.out.println("Capacity: {'Jug A': " + capacities[0] + ", 'Jug B': " + capacities[1] + ", 'Jug C': " + capacities[2] + "}.");
         System.out.println("Initial amount of water: {'Jug A': " + initialState.a + ", 'Jug B': " + initialState.b + ", 'Jug C': " + initialState.c + "}.");
 
