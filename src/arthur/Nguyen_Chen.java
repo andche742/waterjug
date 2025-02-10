@@ -1,3 +1,4 @@
+package arthur;
 import java.util.*;
 
 public class Nguyen_Chen {
