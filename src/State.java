@@ -24,4 +24,9 @@ public class State {
     public int hashCode() {
         return Objects.hash(a, b, c);
     }
+
+    @Override
+    public String toString() {
+        return "[ " + this.a + ", " + this.b + ", " + this.c + "]";
+    }
 }
